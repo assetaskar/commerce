@@ -1,0 +1,14 @@
+mixin product(imageHref="https://via.placeholder.com/300x450", name="Cruise Dual Analog", price="$125.00")
+	.image
+		.btn
+			.btn__link
+				i.fa.fa-shopping-cart
+			.btn__link
+				i.fa.fa-heart
+			.btn__link
+				i.fa.fa-retweet
+		img(src= imageHref, alt="")
+	.name= name
+	.price= price
+	.rating
+		span

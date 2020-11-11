@@ -1,0 +1,110 @@
+extends components/_template
+
+include components/_mixins
+
+block variables
+	- var pageTitle= "Renoshopbee"
+	- var link= "Home"
+
+block content
+	section.intro
+		.intro__part(style="background-image:url(https://via.placeholder.com/1920x800)")
+			.inner
+				.intro__content
+					h1.intro__title
+						| The best 
+						span woocommerce
+					p.intro__text Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+					button.intro__button(href="#") Buy now
+	section.best-sellers
+		.container
+			.best-sellers__row
+				.best-sellers__col
+					h1.title.best-sellers__title Best sellers
+					h2.subtitle.best-sellers__subtitle The best productions from us
+					p.best-sellers__text Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				.best-sellers__col
+					+product()
+				.best-sellers__col
+					+product()
+				.best-sellers__col
+					+product()
+				.best-sellers__col
+					+product()
+	section.service
+		.service__box
+			.service__icon
+				i.fa.fa-diamond
+			.service__title Special offers
+			.service__slogan Shop Big Save Big
+		.service__box
+			.service__icon
+				i.fa.fa-paper-plane
+			.service__title Free delivery
+			.service__slogan On Orders Above $99
+		.service__box
+			.service__icon
+				i.fa.fa-retweet
+			.service__title 30 Days Return
+			.service__slogan Policy We Offers
+		.service__box
+			.service__icon
+				i.fa.fa-rocket
+			.service__title Fastest Shipping
+			.service__slogan 2 Days Express
+	section.promotion
+		.promotion__box
+			.promotion__head Fashion
+			.promotion__slogan Summer & autumn
+			.promotion__foot Winter collection
+		.promotion__box.promotion__box_bg-light
+			.promotion__head Fashion for men
+			.promotion__slogan 30% off
+			.promotion__foot Winter collection
+		.promotion__box
+			.promotion__head Fashion
+			.promotion__slogan New fashion styles
+			.promotion__foot Winter collection
+	section.products
+		.container
+			.products__header
+				h1.title.products__title Featured products
+				h2.subtitle Newest trends from top brands
+			.products__body
+				.products__item
+					+product()
+				.products__item
+					+product()
+				.products__item
+					+product()
+				.products__item
+					+product()
+				.products__item
+					+product()
+				.products__item
+					+product()
+				.products__item
+					+product()
+				.products__item
+					+product()
+				.products__item
+					+product()
+				.products__item
+					+product()
+	section.subscribe-clients
+		.subscribe
+			.subscribe__content
+				h1.subscribe__title Get Out Special Discount
+				p Donec eu tristique felis. Duis augue mi, auctor ut purus et, dignissim aliquet quam. register your email for news and special offers
+				form(action="")
+					input(type="email", placeholder="E-mail address ...", name="email", class="subscribe__email")
+					input(type="submit", value="Get coupon now", class="subscribe__button")
+		.clients
+			.clients__img
+				img(src="image/brand_logo_1.png", alt="")
+			.clients__img
+				img(src="image/brand_logo_2.png", alt="")
+			.clients__img
+				img(src="image/brand_logo_3.png", alt="")
+			.clients__img
+				img(src="image/brand_logo_4.png", alt="")

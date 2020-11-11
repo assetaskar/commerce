@@ -1,0 +1,89 @@
+/* Footer */
+
+.footer {
+	font-family: $Roboto;
+	font-weight: 400;
+	letter-spacing: 0.025em;
+
+	&__top {
+		border-top: solid 1px $c06;
+		border-bottom: solid 1px $c06;
+	}
+
+	&__text {
+		align-self: center;
+	}
+
+	&__socials {
+		width: 28%;
+		display: flex;
+		justify-content: space-between;
+		border-left: 1px solid $c06;
+		border-right: 1px solid $c06;
+		padding: 20px 3%;
+
+		a {
+			color: inherit;
+			font-size: 16px;
+		}
+	}
+
+	&__body {
+		padding: 40px 0 75px;
+	}
+
+	&__box {
+		width: 25%;
+	}
+
+	&__title {
+		font-family: $Poppins;
+		font-size: 16px;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		margin-bottom: 40px;
+	}
+
+	&__link li {
+		margin-bottom: 15px;
+
+		a {
+			color: inherit;
+		}
+	}
+
+	&__contact {
+		li {
+			margin-bottom: 25px;
+		}
+
+		i {
+			margin-right: 10px;
+		}
+	}
+
+	a:hover {
+		color: $c04;
+
+		i {
+			color: initial;
+		}
+	}
+
+	&__bottom {
+		background-color: $c01;
+		color: $c07;
+		padding: 15px 0;
+	}
+
+	&__copyright {
+		align-self: center;
+	}
+
+	&__payment i {
+		font-size: 30px;
+		line-height: 1;
+		margin-left: 15px;
+	}
+}

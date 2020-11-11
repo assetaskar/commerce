@@ -1,0 +1,150 @@
+block variables
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title= pageTitle
+		link(rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css")
+		link(rel="stylesheet" href="css/style.css")
+	body
+		header.header
+			.header__top
+				.container.flex-between
+					.header__contact
+						.header__phone
+							|
+							|
+							a(href="tel:")
+								i.fa.fa-phone(aria-hidden="true")
+								| +1 123 456 7890
+							|
+							|
+						.header__mail
+							|
+							|
+							a(href="mailto:")
+								i.fa.fa-envelope(aria-hidden="true")
+								| info@company.com
+							|
+							|
+					.header__socials
+						include ../components/_socials
+			nav.header__navbar
+				.container.flex-between
+					.header__brend
+						|
+						|
+						a(href="/")
+							span Renoshop
+							| bee
+						|
+						|
+					.header__menu
+						ul
+							each value, index in {"Home" : "index", "Women" : "#", "Men" : "#", "Kids" : "#", "Jewellery" : "#", "Accessories" : "#"}
+								li
+									if link == index
+										a.active(href= "/" + value + ".html")= index
+									else
+										a(href= "/" + value + ".html")= index
+					.header__tools
+						|
+						|
+						a.header__cart(href="#")
+							i.fa.fa-shopping-cart(aria-hidden="true")
+							span 3
+						|
+						|
+						a.header__search(href="#")
+							i.fa.fa-search(aria-hidden="true")
+						|
+						|
+						a.header__bars(href="#" hidden)
+							i.fa.fa-bars(aria-hidden="true")
+						|
+						|
+
+		block content
+
+		footer.footer
+			.footer__top
+				.inner.flex-between
+					.footer__text
+						| We’re confident we’ve provided all the best for you. Stay connect with us
+					.footer__socials
+						include ../components/_socials
+			.footer__body
+				.inner.flex-between
+					.footer__box
+						.footer__title Information
+						.footer__link
+							ul
+								li
+									a(href="#") Delivery Information
+								li
+									a(href="#") Discount
+								li
+									a(href="#") Sitemap
+								li
+									a(href="#") Privacy Policy
+								li
+									a(href="#") My Account
+					.footer__box
+						.footer__title My account
+						.footer__link
+							ul
+								li
+									a(href="#") Sign In
+								li
+									a(href="#") View Cart
+								li
+									a(href="#") My Wishlist
+								li
+									a(href="#") Check out
+								li
+									a(href="#") Track My Order
+					.footer__box
+						.footer__title Help
+						.footer__link
+							ul
+								li
+									a(href="#") F.A.Q.
+								li
+									a(href="#") Shipping
+								li
+									a(href="#") Contact Us
+								li
+									a(href="#") Privacy Policy
+					.footer__box
+						.footer__title Contact info
+						.footer__link
+							ul.footer__contact
+								li.footer__address
+									i.fa.fa-globe(aria-hidden="true")
+									|1234 Your Address, Country.
+								li.footer__phone
+									a(href="tel:")
+										i.fa.fa-phone(aria-hidden="true")
+										| +1 123 456 7890
+								li.footer__mail
+									a(href="mailto:")
+										i.fa.fa-envelope(aria-hidden="true")
+										| mail@domain.com
+			.footer__bottom
+				.inner.flex-between
+					.footer__copyright.
+						<i class="fa fa-copyright" aria-hidden="true"></i>
+						Copyright 2020 RenoshopBee all right reserved
+					.footer__payment
+						<i class="fa fa-cc-mastercard" aria-hidden="true"></i>
+						|
+						|
+						<i class="fa fa-cc-amex" aria-hidden="true"></i>
+						|
+						|
+						<i class="fa fa-cc-paypal" aria-hidden="true"></i>
+						|
+						|
+						<i class="fa fa-cc-visa" aria-hidden="true"></i>
